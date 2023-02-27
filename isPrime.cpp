@@ -26,7 +26,7 @@ int main() {
         cin >> userNum;
         for (int i = 1; i <= userNum; i++) {
             bool result = isPrime(i);
-            if (result && !(count(primes_list.begin(), primes_list.end(), i))) {
+            if (result) {
                 primes_list.push_back(i);
             }
         }
