@@ -3,7 +3,7 @@
 using namespace std;
 
 double f2c(double fahrenheit);
-void seqsum(int n);
+void seqsum(int n, int i, int maxnum, int &runningSum);
 
 int main() {
     double userTemp;
@@ -17,15 +17,24 @@ int main() {
     cin >> userTemp;
     tempInCelsius = f2c(userTemp);
 
-    cout << setprecision(4) << endl;
+    cout << setprecision(4);
     cout << userTemp << " degrees fahrenheit = " << tempInCelsius << " degrees celsius" << endl << endl;
-
     cout << "Enter number greater than 0: ";
     cin >> n;
 
     cout << n << ":  ";
+    seqsum(n, i, maxnum, runningSum);
+    cout << " = " << runningSum;
+    return 0;
+}
 
-    while (n > 0 && n <=1000) {
+double f2c(double fahrenheit) {
+    double celcius = (fahrenheit - 32) * 0.556;
+    return celcius;
+}
+
+void seqsum(int n, int i, int maxnum, int &runningSum) {
+        while (n > 0 && n <=1000) {
         if (n < 1 || n > maxnum) {
             break;
         }
@@ -37,16 +46,5 @@ int main() {
         i++;
         n--;
     }
-    cout << " = " << runningSum;
-
-    return 0;
-}
-
-double f2c(double fahrenheit) {
-    double celcius = (fahrenheit - 32) * 0.556;
-    return celcius;
-}
-
-void seqsum(int n) {
-
+    return;
 }
