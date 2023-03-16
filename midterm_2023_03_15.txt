@@ -1,0 +1,69 @@
+Midterm (30 points; 5 points each question)
+
+Q1. Write a C++ program q1.cpp that loops forever and asks the user to enter 2 positive numbers n1 and n2 that are less than 1000 each.
+Ignore out of range numbers and start all over.
+Calculate the sum of the sequence from n1 to n2, inclusive.
+Ask the user if they want to repeat.
+Write the function int seqsum(int n1, int n2) and use it in the question.
+
+Q2.  Write a C++ program q2.cpp that loops forever and asks the user to enter 3 positive numbers n1, n2, and n3 that are less than 1000 each.
+Ignore out of range numbers and start all over.
+Check if n1, n2, n3 form a triangle.
+Check if n1, n2, n3 form a right angle triangle.
+Write results to screen.
+Ask the user if they want to repeat.
+Write these two functions and use them.
+bool is_triangle(int x, int y, int z)
+bool is_right_angle_triangle(int x, int y, int z)
+For a right angle triangle, z*z = x*x + y*y.
+
+Q3. Write a program that asks the user to enter the names of two input text files: f1name and f2name.
+Open file f1 for reading and f2 for writing.
+Read lines from f1.
+Use this midterm file as f1.
+Write to and to f2 and screen the number of times each letter of your first name (in English) is repeated in the file. 
+Write a function containsChar to check if a character is in your name.  This one is written by chatGPT; you can use it:
+bool containsChar(std::string str, char ch) 
+{
+    for (char c : str) 
+	{
+        if (c == ch) 
+		{
+            return true;
+        }
+    }
+    return false;
+}
+
+Q4. Loops
+write these functions 
+void print_array_forloop(int a[], int size);
+void print_array_forloop_reverse(int a[], int size);
+void print_array_whileloop(int a[], int size);
+void print_array_dowhileloop(int a[], int size);
+
+void Q5(void) 
+{
+	int a[] = { 10, 20, 30, 40, 50, 60, 70, 80, 90, 100 };
+	//size = 10
+	cout << "print_array_forloop: " << endl;
+	//call print_array_forloop
+	cout << "print_array_whileloop: " << endl;
+	//call print_array_whileloop
+	cout << "print_array_dowhileloop: " << endl;
+	//call print_array_whileloop
+	cout << "print_array_forloop_reverse: " << endl;
+	//call print_array_forloop_reverse
+}
+
+Note:
+=====
+You can write each question as a separate program or use:
+
+int main(void)
+{
+	q1_main();
+	q2_main();
+	q3_main();
+	q4_main();
+}
