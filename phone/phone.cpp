@@ -1,6 +1,7 @@
 #include "phone.hpp"
 
 bool isValid(string &line) {
+    // char* line = &line[0];
     int alnumCharsCount;
     unsigned int i;
     int size;
@@ -12,7 +13,8 @@ bool isValid(string &line) {
             alnumCharsCount+=1;
         }
     }
-    
+    cout << line << endl;
+
     return (alnumCharsCount == 10 or alnumCharsCount == 11) ? true : false;
 }
 

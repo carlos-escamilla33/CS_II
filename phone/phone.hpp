@@ -7,3 +7,4 @@
 using namespace std;
 
 bool isValid(string &line);
+char phone_digit(char ch);
