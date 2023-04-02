@@ -1,19 +1,18 @@
 #include "phone.hpp"
 
 bool isValid(string &line) {
-    // char* line = &line[0];
-    int alnumCharsCount;
+    int size = line.size() + 1;
+    char charArr[size];
+    strcpy(charArr, line.c_str());
     unsigned int i;
-    int size;
-    size = line.size();
-    alnumCharsCount = 0;
+    int alnumCharsCount = 0;
+
     for (i = 0; i < size; i++) {
-        char ch = line.at(i);
+        char ch = charArr[i];
         if (isalnum(ch)) {
             alnumCharsCount+=1;
         }
     }
-    cout << line << endl;
 
     return (alnumCharsCount == 10 or alnumCharsCount == 11) ? true : false;
 }
