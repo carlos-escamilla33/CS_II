@@ -10,7 +10,5 @@ bool isValid(string &line);
 char phone_digit(char ch);
 void toNumeric(string &line);
 void punctsToSpaces(string &line);
-void removeSpaces2(string &line);
 void removeSpaces(string &line);
-void formatNumber2(string &line);
-void format_number(string &line);
+void formatNumber(string &line);

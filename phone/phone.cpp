@@ -104,28 +104,26 @@ void removeSpaces(string &line) {
     return;
 }
 
+void formatNumber(string &line) {
+    string st;
+    size_t len = line.length();
+    size_t lineIndex = 0;
 
-// Alphanumeric means consisting of both letters and numbers
-//Examples: 800-Beat-Cal ; 1-800.Got.Milk ; 888-IMask.up; 1(800)---got Milk
-int main(void) {
-    cout << "Welcome to phone assignment!" << endl;
-    while(true) {
-        string line;
-        cout << "Enter a 10-11 digit phone number: " << endl;
-        getline(cin, line);
-        if (line.empty()) {
-            break;
-        }
-        if (!isValid(line)) {
-            cout << "You typed an invalid US phone number: " << endl;
-            continue;
-        }
-        toNumeric(line);
-        punctsToSpaces(line);
-        removeSpaces(line);
-        cout << "Number = " << line << endl;
-        break;
+    if (line[lineIndex] == '1') {
+        st.push_back('1');
+        st.push_back('-');
+        lineIndex++;
     }
+    size_t stIndex = 0;
     
-    return 0;
+    while (lineIndex < len) {
+        if (stIndex == 3 || stIndex == 7) {
+            st.push_back('-');
+            stIndex++;
+        }
+        st.push_back(line[lineIndex]);
+        lineIndex++;
+        stIndex++;
+    }
+    line = st;
 }
