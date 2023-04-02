@@ -96,6 +96,14 @@ void punctsToSpaces(string &line) {
     return;
 }
 
+void removeSpaces(string &line) {
+    line.erase(
+        remove(line.begin(), line.end(), ' '),
+        line.end()
+    );
+    return;
+}
+
 
 // Alphanumeric means consisting of both letters and numbers
 //Examples: 800-Beat-Cal ; 1-800.Got.Milk ; 888-IMask.up; 1(800)---got Milk
