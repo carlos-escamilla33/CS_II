@@ -12,7 +12,7 @@ void array_copy(const int a[], int b[], size_t size);
 void array_copy(const double a[], double b[], size_t size);
 
 void array_reverse(int a[], size_t size);
-void array_reserse(double a[], size_t size);
+void array_reverse(double a[], size_t size);
 
 void array_min_sort(int a[], size_t size);
 void array_min_sort(double a[], size_t size);
