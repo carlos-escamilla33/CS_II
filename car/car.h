@@ -11,6 +11,9 @@ class Car {
         Car(string& modelName, int modelYear);
 
         // Set functions; modifiers; read/write
+        void set_name(const string& carName);
+        void set_year(int carYear);
+        virtual void set(const string& carName, int carYear);
 
     private:
         static int count;
