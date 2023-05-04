@@ -3,35 +3,22 @@
 using namespace std;
 
 class Car {
+    // Basic four methods
     public:
-        Car(); // default constructor (1)
-        ~Car(); // default deconstructor (2)
-        Car(const Car& c); // assignment operator (3)
-        Car& operator=(const Car& c);
-        Car(string& modelName, int modelYear);
+        Car(); // default constructor 1
+        virtual ~Car(); // default deconstructor 2
+        Car(const Car& c); // copy constructor 3
+        virtual Car& operator=(const Car& c); // assignment operator 4
 
-        // Set functions; modifiers; read/write
-        void set_name(const string& carName);
-        void set_year(int carYear);
-        virtual void set(const string& carName, int carYear); // a function that can be editied or changed in another class
+        Car(const string& modelName_i, int year_i);
 
-        // get function; selectors; read only
-        //  const means function does not change the object (*this)
-        const string& get_name() const;
+        const string get_model_name() const; 
         int get_year() const;
 
-        // this is not a member (no this); no Person::; no "this" pointer
-        // but has access to private members
-        friend ostream& operator<< (ostream& os, const Car& p);
+        void set_model_name(const string& modelName_i);
+        void set_year(int year_i);
 
-        // static(no this)
-        static int get_count(); // Car::getCount()
-
-        virtual void read();
-
-        // data
-    private:
-        static int count;
-        string make, model;
-        unsigned int year;
+        private:
+            string modelName;
+            int year;
 };
