@@ -13,8 +13,23 @@ class Car {
         // Set functions; modifiers; read/write
         void set_name(const string& carName);
         void set_year(int carYear);
-        virtual void set(const string& carName, int carYear);
+        virtual void set(const string& carName, int carYear); // a function that can be editied or changed in another class
 
+        // get function; selectors; read only
+        //  const means function does not change the object (*this)
+        const string& get_name() const;
+        int get_year() const;
+
+        // this is not a member (no this); no Person::; no "this" pointer
+        // but has access to private members
+        friend ostream& operator<< (ostream& os, const Car& p);
+
+        // static(no this)
+        static int get_count(); // Car::getCount()
+
+        virtual void read();
+
+        // data
     private:
         static int count;
         string make, model;
