@@ -18,7 +18,18 @@ class Car {
         void set_model_name(const string& modelName_i);
         void set_year(int year_i);
 
+        virtual void set(const string& modelName_i, int year_i);
+        virtual void set(const Car& c);
+
+        virtual void read();
+        virtual void print() const;
+
+        static int get_count();
+
+        friend ostream& operator << (ostream& os, const Car& p);
+
         private:
+            static int count;
             string modelName;
             int year;
 };
