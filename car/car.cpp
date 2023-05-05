@@ -2,7 +2,7 @@
 #include "car.h"
 using namespace std;
 
-int Car:: count = 0;
+int Car::count = 0;
 
 Car::Car() {
     set(" ", 0);
