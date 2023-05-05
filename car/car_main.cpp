@@ -1,6 +1,7 @@
 #include <iostream>
 #include <vector>
-#include "car.h"
+#include <string>
+#include "Car.h"
 using namespace std;
 
 int main(void) {
@@ -8,7 +9,7 @@ int main(void) {
 
     string modelName = "Toyota";
     Car c1(modelName, 1990);
-    Car c2, c3;
+    // Car c2, c3;
 
     // c2.set(modelName, 2007);
 

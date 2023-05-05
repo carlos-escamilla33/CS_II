@@ -1,5 +1,5 @@
 #include <iostream>
-#include "car.h"
+#include "Car.h"
 using namespace std;
 
 int Car::count = 0;
@@ -12,7 +12,7 @@ Car::Car() {
 }
 
 Car::~Car() {
-    count--;
+    this->count--;
 }
 
 Car::Car(const Car& c) {
@@ -36,6 +36,7 @@ Car& Car::operator=(const Car& c) {
 Car::Car(const string& modelName_i, int year_i) {
     count++;
 }
+
 
 const string Car::get_model_name() const {
     return modelName;
