@@ -1,5 +1,10 @@
 #include "Account.h"
 
+Account::Account() {
+    balance = 0;
+    name = "";
+}
+
 void Account::set_name(string n) {
     name = n;
 }

@@ -9,6 +9,9 @@ class Account {
         double balance;
 
     public:
+        Account();
+        Account(string acc_name, int balance);
+        ~Account();
         void set_balance(double bal) {balance = bal;}
         double get_balance() {return balance;}
         
