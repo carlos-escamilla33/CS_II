@@ -1,8 +1,12 @@
 #include "Account.h"
 
-Account::Account() {
-    balance = 0;
-    name = "";
+// Account::Account() {
+//     balance = 0;
+//     name = "";
+// }
+
+Account::Account()
+    : name{"None"}, balance{0} {
 }
 
 void Account::set_name(string n) {
