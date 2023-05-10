@@ -39,6 +39,6 @@ Ev::Ev(const string& make_i, unsigned int year_i,
 
 // getfunction
 const string Ev::get_make() const {
-    
+    return make;
 }
 
