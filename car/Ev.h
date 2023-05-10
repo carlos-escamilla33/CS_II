@@ -7,7 +7,7 @@ class Ev: public Car {
     public:
         Ev(); // default constructor 1
         virtual ~Ev(); // default destructor 2
-        Ev(const Ev& e); // copy constructor 3 
+        Ev(const Ev& e); // copy constructor 3
         virtual Ev& operator=(const Ev& e);
 
         Ev(const string& make_i, unsigned int year_i,
