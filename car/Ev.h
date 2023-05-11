@@ -42,4 +42,5 @@ class Ev: public Car {
             // do not use it in static methods
             string make;
             unsigned int year;
+            unsigned int battery;
 };
